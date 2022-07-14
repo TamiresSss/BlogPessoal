@@ -1,4 +1,4 @@
-package com.generation.blogpessoal.segurity;
+package com.generation.blogpessoal.security;
 
 import java.util.Optional;
 
@@ -9,13 +9,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.generation.blogpessoal.model.Usuario;
-import com.generation.blogpessoal.repository.UsuarioRepository;
+
 
 @Service
 public class UserDetailsServiceImp implements UserDetailsService{
 
 	@Autowired
-	private UsuarioRepository userRepository;
+	private UsuarioRepositoryTest userRepository;
 	
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {

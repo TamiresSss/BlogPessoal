@@ -1,4 +1,4 @@
-package com.generation.blogpessoal.segurity;
+package com.generation.blogpessoal.security;
 
 import java.util.Collection;
 

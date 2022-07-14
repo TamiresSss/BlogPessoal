@@ -10,13 +10,13 @@ import org.springframework.stereotype.Service;
 
 import com.generation.blogpessoal.model.UserLogin;
 import com.generation.blogpessoal.model.Usuario;
-import com.generation.blogpessoal.repository.UsuarioRepository;
+import com.generation.blogpessoal.repository.UsuarioRepositoryTest;
 
 @Service
 public class UsuarioService {
 	
 	@Autowired
-	private UsuarioRepository usuarioRepository;
+	private UsuarioRepositoryTest usuarioRepository;
 	
 	
 	public Optional<Usuario> cadastrarUsuario(Usuario usuario) {
