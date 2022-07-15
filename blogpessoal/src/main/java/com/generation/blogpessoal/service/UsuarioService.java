@@ -12,6 +12,7 @@ import com.generation.blogpessoal.model.UserLogin;
 import com.generation.blogpessoal.model.Usuario;
 import com.generation.blogpessoal.repository.UsuarioRepository;
 
+
 @Service
 public class UsuarioService {
 	
