@@ -8,7 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -16,9 +18,12 @@ import javax.persistence.Column;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,11 +33,16 @@ public class Usuario {
     @Size(min = 2, max = 100)
     private String nome;
 
-    @NotBlank
-    @Size(min = 5, max = 100)
+    @Schema(example = "email@email.com.br")
+    @NotNull(message = "O atributo Usuário é Obrigatório!")
+    @Email(message = "O atributo Usuário deve ser um email válido!")
     private String usuario;
 
-    @Size(min = 5, max = 100)
+    public void setId(Long id) {
+		this.id = id;
+	}
+
+	@Size(min = 5, max = 100)
     private String senha;
     
     private String foto;
