@@ -15,7 +15,7 @@
 	<name>blogpessoal</name>
 	<description> Project pessoal desenvolvido na Generation Brasil</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
